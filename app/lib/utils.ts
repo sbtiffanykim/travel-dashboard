@@ -26,3 +26,7 @@ export const calculateTrendPercentage = (
     return { trend: 'no change', percentage: 0 };
   }
 };
+
+export function getFirstWord(input: string): string {
+  return input.trim().split(/\s+/)[0] || '';
+}

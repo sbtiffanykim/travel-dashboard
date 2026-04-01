@@ -1,21 +1,9 @@
 import { Header, StatsCard, TripCard } from 'components';
+import { dashboardStats, user, allTrips } from '~/constants';
+
+const { totalUsers, usersJoined, totalTrips, tripsCreated, userRole } = dashboardStats;
 
 const Dashboard = () => {
-  // fake user
-  const user = {
-    name: 'abc',
-  };
-  // fake data
-  const dashboardStats = {
-    totalUsers: 12450,
-    usersJoined: { currentMonth: 218, lastMonth: 150 },
-    totalTrips: 3210,
-    tripsCreated: { currentMonth: 150, lastMonth: 250 },
-    userRole: { total: 62, currentMonth: 25, lastMonth: 15 },
-  };
-
-  const { totalUsers, usersJoined, totalTrips, tripsCreated, userRole } = dashboardStats;
-
   return (
     <main className='dashboard wrapper'>
       <Header
@@ -45,6 +33,7 @@ const Dashboard = () => {
           />
         </div>
       </section>
+
       <TripCard />
     </main>
   );
